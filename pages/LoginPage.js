@@ -19,6 +19,22 @@ class LoginPage {
             .typeText(this.passwordInput, userPassword)
             .click(this.loginButton);
     }
+
+    /*
+     * @param userName the username of the user for login
+     * This function is for get the empty password message.
+     */
+    async loginWithoutPasswordInput(userName) {
+        await t
+            .typeText(this.usernameInput, userName)
+            .click(this.loginButton);
+    }
+
+    //Function for click login button
+    async clickLoginButton(){
+        await t
+            .click(this.loginButton);
+    }
     
 }
 

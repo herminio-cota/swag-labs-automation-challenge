@@ -7,7 +7,7 @@ const userData = require('../data/usersData.json');
 fixture`SORT TEST`
     .page`https://www.saucedemo.com`;
 
-userData.all_users.forEach(username => {
+userData.validUsers.forEach(username => {
     //Expected: Validate the products have been sorted by price correctly
     test(`Sort products by Price (low to high) with the user ${username}`, async t => {
 
