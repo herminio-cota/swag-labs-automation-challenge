@@ -9,7 +9,7 @@ const testVariablesData = require('../data/testsVariablesData.json');
 fixture`ADD ITEMS TO SHOPPING CART TEST`
     .page`https://www.saucedemo.com`;
 
-userData.all_users.forEach(username => {
+userData.validUsers.forEach(username => {
 
     //Expected: Validate all the items that have been added to the shopping cart.
     test(`Add multiple items to the shopping cart with user ${username}`, async t => {
