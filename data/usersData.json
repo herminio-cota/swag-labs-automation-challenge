@@ -8,5 +8,6 @@
         "firstName": "Herminio",
         "lastName": "Cota",
         "postalCode": "45016"
-    }
+    },
+    "all_users": ["standard_user", "locked_out_user", "problem_user", "performance_glitch_user"]
 }
