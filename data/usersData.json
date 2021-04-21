@@ -1,13 +1,16 @@
 {
-    "standar": "standard_user",
     "locked": "locked_out_user",
-    "problem": "problem_user",
-    "performance": "performance_glitch_user",
+    "wrongUserOrPassword": "asd",
+    "correctUser": "standard_user",
     "general_password": "secret_sauce",
     "checkout": {
         "firstName": "Herminio",
         "lastName": "Cota",
         "postalCode": "45016"
     },
-    "all_users": ["standard_user", "locked_out_user", "problem_user", "performance_glitch_user"]
+    "validUsers": [
+        "standard_user",
+        "problem_user",
+        "performance_glitch_user"
+    ]
 }
