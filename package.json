@@ -1,0 +1,12 @@
+{
+    "scripts": {
+        "testsChrome": "testcafe chrome tests/* --reporter html:reports/reports_chrome.html",
+        "testsFirefox": "testcafe firefox tests/* --reporter html:reports/reports_firefox.html",
+        "testsSafari": "testcafe safari tests/* --reporter html:reports/reports_safari.html",
+        "testsOpera": "testcafe opera tests/* --reporter html:reports/reports_opera.html"
+    },
+    "dependencies": {
+        "testcafe": "^1.14.0",
+        "testcafe-reporter-html": "^1.4.6"
+    }
+}
