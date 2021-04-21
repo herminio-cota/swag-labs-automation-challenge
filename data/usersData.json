@@ -1,0 +1,12 @@
+{
+    "standar": "standard_user",
+    "locked": "locked_out_user",
+    "problem": "problem_user",
+    "performance": "performance_glitch_user",
+    "general_password": "secret_sauce",
+    "checkout": {
+        "firstName": "Herminio",
+        "lastName": "Cota",
+        "postalCode": "45016"
+    }
+}
