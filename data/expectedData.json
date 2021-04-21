@@ -1,0 +1,16 @@
+{
+    "loginTest": {
+        "productsPageTitle": "Products",
+        "invalidUserErrorMessage": "Epic sadface: Sorry, this user has been locked out."
+    },
+
+    "shoppingCarTest": {
+        "textRemoveButton": "Remove"
+    }
+
+    ,
+
+    "checkout": {
+        "completeMessage": "THANK YOU FOR YOUR ORDER"
+    }
+}
