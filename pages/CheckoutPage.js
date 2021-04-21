@@ -1,4 +1,5 @@
 import { Selector, t } from 'testcafe';
+const expectedData = require('../data/expectedData.json');
 
 class CheckoutPage {
     constructor() {
@@ -11,6 +12,7 @@ class CheckoutPage {
         this.totalAmount = Selector('.summary_total_label');
         this.finishButton = Selector('#finish');
         this.completeHeader = Selector('.complete-header');
+        this.errorMessageContainer = Selector('.error-message-container.error');
     }
 
     /**
@@ -26,6 +28,32 @@ class CheckoutPage {
             .typeText(this.lastNameInput, lastName)
             .typeText(this.postalCode, postalCode)
             .click(this.continueButton);
+    }
+
+    /**
+    * 
+    * @param firstName the firstname to fill in checkout section
+    * @param lastName  the lastname to fill in checkout section
+    * @param postalCode the postalcode to fill in checkout section
+    * @returns a error message according the empty value
+    * Function to fill the checkout form 
+    * 
+    */
+    async getTheCheckoutInformationErrorMessage(firstName, lastName, postalCode) {
+
+        await t
+            .typeText(this.firstNameInput, firstName)
+            .typeText(this.lastNameInput, lastName)
+            .typeText(this.postalCode, postalCode)
+            .click(this.continueButton);
+
+        if (firstName == ' ') {
+            return expectedData.checkout.firstNameRequired
+        } else if (lastName == ' ') {
+            return expectedData.checkout.lastNameRequired
+        } else {
+            return expectedData.checkout.postalCodeRequired
+        }
     }
 
     /**
