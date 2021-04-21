@@ -7,11 +7,11 @@ class ShoppingCartPage {
         this.checkoutButton = Selector('#checkout');
     }
 
-    setSpesificProductByName(exactText){
+    setSpecificProductByName(exactText){
         this.specificItem = Selector('div.inventory_item_name').withExactText(exactText).parent(2);
     }
 
-    getSpesificProductByName(){
+    getSpecificProductByName(){
         return this.specificItem;
     }
 }

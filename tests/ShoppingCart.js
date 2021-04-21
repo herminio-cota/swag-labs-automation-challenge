@@ -55,8 +55,8 @@ test('Add multiple items to the shopping cart', async t => {
 test('Add the specific product ‘Sauce Labs Onesie’ to the shopping cart', async t => {
 
     //Add only the product with the name ‘Sauce Labs Onesie’ in products page
-    ProductPage.setSpesificProductByName(testVariablesData.shoppingCarTest.specificProduct);
-    let itemProduct = await ProductPage.getSpesificProductByName();
+    ProductPage.setSpecificProductByName(testVariablesData.shoppingCarTest.specificProduct);
+    let itemProduct = await ProductPage.getSpecificProductByName();
     let itemName = await itemProduct.find('div').withAttribute('class', 'inventory_item_name').textContent;
     let itemPrice = await itemProduct.find('div').withAttribute('class', 'inventory_item_price').textContent;
     let itemAddButton = await itemProduct.find('button');
@@ -68,8 +68,8 @@ test('Add the specific product ‘Sauce Labs Onesie’ to the shopping cart', as
     await t.click(ShoppingCartElement.shoppingCartButton);
 
     // Validate tehe name and the price of the product added in the shoppin cart
-    ShoppingCartPage.setSpesificProductByName(testVariablesData.shoppingCarTest.specificProduct);
-    let itemShoppingCartProduct = await ShoppingCartPage.getSpesificProductByName();
+    ShoppingCartPage.setSpecificProductByName(testVariablesData.shoppingCarTest.specificProduct);
+    let itemShoppingCartProduct = await ShoppingCartPage.getSpecificProductByName();
     let itemNameShopingCart = await itemShoppingCartProduct.find('div').withAttribute('class', 'inventory_item_name').textContent;
     let itemPriceShopingCart = await itemShoppingCartProduct.find('div').withAttribute('class', 'inventory_item_price').textContent;
 

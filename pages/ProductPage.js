@@ -7,11 +7,11 @@ class ProductPage {
         this.specificItem = Selector('.inventory_item').withExactText('');
     }
 
-    setSpesificProductByName(exactText){
+    setSpecificProductByName(exactText){
         this.specificItem = Selector('.inventory_item').find('div.inventory_item_name').withExactText(exactText).parent(3);
     }
 
-    getSpesificProductByName(){
+    getSpecificProductByName(){
         return this.specificItem;
     }
 }
