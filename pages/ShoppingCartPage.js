@@ -54,7 +54,7 @@ class ShoppingCartPage {
      * @param productName name of the producto to obtain
      * @returns return the data of the specific product in the shopping cart
      * Function for getting a product by name of the shopping cart list.
-     */ 
+     */
     async getItemFromSpecificProductByName(productName) {
         await this.setSpecificProductByName(productName);
         let itemShoppingCartProduct = await this.getSpecificProductByName();

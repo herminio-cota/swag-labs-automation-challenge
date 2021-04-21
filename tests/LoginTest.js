@@ -26,3 +26,18 @@ test('Login with an invalid user', async t => {
         .expect(LoginPage.errorMessage.textContent).eql(expectedData.loginTest.invalidUserErrorMessage);
 });
 
+// Test with all users happy path
+userData.all_users.forEach(username => {
+    if (username != userData.standar) {
+        test(`Login with ${username} user `, async t => {
+
+            await LoginPage.login(username, userData.general_password);
+            await t
+                .expect(ProductPage.title.textContent).eql(expectedData.loginTest.productsPageTitle)
+                .expect(BurguerMenuElement.menuBurgerButton.exists).ok();
+        });
+    }
+});
+
+
+

@@ -81,9 +81,9 @@ class ProductPage {
     }
 
     //Function for clicking in shoping cart button
-    async clickOnShopingCartButton(){
+    async clickOnShopingCartButton() {
         await t
-        .click(ShoppingCartElement.shoppingCartButton);
+            .click(ShoppingCartElement.shoppingCartButton);
     }
 
     /**
@@ -92,15 +92,15 @@ class ProductPage {
      * @returns return the data of the specific product added
      * Function for add a product by name of the inventory to the shopping cart.
      */
-    async addSpecificProductToShoppingCartByName(productName){
+    async addSpecificProductToShoppingCartByName(productName) {
         await this.setSpecificProductByName(productName);
         let itemProduct = await this.getSpecificProductByName();
         let itemName = await itemProduct.find('div').withAttribute('class', 'inventory_item_name').textContent;
         let itemPrice = await itemProduct.find('div').withAttribute('class', 'inventory_item_price').textContent;
         let itemAddButton = await itemProduct.find('button');
-    
+
         let itemAdded = { "itemName": itemName, "itemPrice": itemPrice };
-    
+
         await this.setAddButton(itemAddButton);
         await t.click(itemAddButton);
 
@@ -108,12 +108,12 @@ class ProductPage {
     }
 
     //Function for set a value to addButton
-    async setAddButton(addButton){
+    async setAddButton(addButton) {
         this.addButton = addButton;
     }
 
     //Function to get the addButton item
-    async getAddButton(){
+    async getAddButton() {
         return this.addButton;
     }
 
